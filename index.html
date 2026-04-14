@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Rotina Jussara & Neto</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rotina Jussara & Neto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <p class="eyebrow">Rotina compartilhada</p>
+      <h1>Jussara & Neto</h1>
+      <p class="subtitle">Tarefas da semana, subtarefas e organização mensal.</p>
+    </header>
+
+    <main class="layout">
+      <section class="main-column">
+        <div class="card">
+          <div class="card-header">
+            <h2>Tarefas da semana</h2>
+          </div>
+
+          <div class="task">
+            <div class="task-top">
+              <div>
+                <h3>Cozinha da semana</h3>
+                <p>Neto · Terça · 19:30</p>
+              </div>
+              <span class="badge">Em andamento</span>
+            </div>
+
+            <label><input type="checkbox" /> Lavar louça</label>
+            <label><input type="checkbox" /> Limpar bancada</label>
+            <label><input type="checkbox" /> Limpar fogão</label>
+          </div>
+
+          <div class="task">
+            <div class="task-top">
+              <div>
+                <h3>Planejar refeições</h3>
+                <p>Jussara · Quinta · 20:00</p>
+              </div>
+              <span class="badge badge-yellow">A fazer</span>
+            </div>
+
+            <label><input type="checkbox" /> Definir jantas</label>
+            <label><input type="checkbox" /> Fazer lista de compras</label>
+            <label><input type="checkbox" /> Separar marmitas</label>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2>Bloco mensal</h2>
+            <button id="toggleMensal">Ativar este mês</button>
+          </div>
+
+          <div class="task" id="mensalBox">
+            <div class="task-top">
+              <div>
+                <h3>Faxina mensal</h3>
+                <p>Jussara e Neto · 1º sábado do mês</p>
+              </div>
+              <span class="badge badge-purple" id="mensalStatus">Planejada</span>
+            </div>
+
+            <label><input type="checkbox" /> Limpar geladeira</label>
+            <label><input type="checkbox" /> Revisar despensa</label>
+            <label><input type="checkbox" /> Organizar armário</label>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side-column">
+        <div class="card">
+          <h2>Visão por pessoa</h2>
+          <div class="person-box">
+            <strong>Jussara</strong>
+            <p>Planejar refeições</p>
+          </div>
+          <div class="person-box">
+            <strong>Neto</strong>
+            <p>Cozinha da semana</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Próximo passo</h2>
+          <p>Depois podemos ligar isso a lembretes por e-mail ou Google Calendar.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
